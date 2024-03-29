@@ -1,0 +1,44 @@
+﻿@model HealthHub_MVC_CORE.Models.Doctor;
+@{
+    ViewData["Title"] = "AddDoctor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Add Doctor</h4>
+
+                        <form asp-action="AddDoctor" method="post">
+                            <div class="mb-3">
+                                <label asp-for="Name" class="form-label">Name</label>
+                                <input type="text" asp-for="Name"  class="form-control" id="aname" />
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Department" class="form-label">Department</label>
+                                <input type="text" asp-for="Department" class="form-control" id="ano" />
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="EmploymentStatus" class="form-label">Employment Status</label>
+                                <select class="form-select" asp-for="EmploymentStatus" id="astatus" aria-label="Default select example">
+                                    <option value="Select Status" selected>Select Status</option>
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Part Time">Part Time</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Specification" class="form-label">Specification</label>
+                                <input type="text" asp-for="Specification" class="form-control" id="adname" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<HealthHub_MVC_CORE.Models.Announcement>
+@{
+    ViewData["Title"] = "List Of Announcement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <div class="main-panel">
+            <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> List of Announcement </h3>
+            </div>
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">List of Announcement</h4>
+                            <a class="btn btn-outline-success btn-fw" asp-area="" asp-action="AddAnnouncement" asp-controller="Admin">Add Announcement</a>
+                            <asp:Panel CssClass="my-2" ID="Panel1" runat="server">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Announcements</th>
+                                        <th>Announcement For</th>
+                                        <th>Enddate</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Announcement announcement in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => announcement.Id)</td>
+                                            <td>@Html.DisplayFor(modelItem => announcement.Announcements)</td>
+                                            <td>@Html.DisplayFor(modelItem => announcement.AnnouncementFor)</td>
+                                            <td>@Html.DisplayFor(modelItem => announcement.Enddate)</td>
+                                            <td>
+                                                <a class="nav-link" asp-action="UpdateAnnouncement" asp-route-id="@announcement.Id">Update</a>
+                                                <a class="remove-ambulance" href="#" data-ambulance-id="@announcement.Id">Remove</a>
+                                                </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            </asp:Panel>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+  
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".remove-ambulance").click(function (e) {
+                e.preventDefault();
+                var Id = $(this).data("ambulance-id");
+                if (confirm("Are you sure you want to remove this Announcement?")) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/admin/RemoveAnnouncement/" + Id,
+                        success: function (response) {
+                            if (response.success) {
+                                alert("Announcement removed successfully");
+                                $(e.target).closest("tr").remove();
+                            } else {
+                                alert("Failed to remove Announcement");
+                            }
+                        },
+                        error: function () {
+                            alert("Error removing Announcement");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
+
+

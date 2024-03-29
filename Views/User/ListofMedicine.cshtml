@@ -1,0 +1,52 @@
+﻿@model IEnumerable<HealthHub_MVC_CORE.Models.Medicine>
+@{
+    ViewData["Title"] = "List of Medicine";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+        <div class="main-panel">
+            <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> List of Medicine </h3>
+            </div>
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">List of Medicine</h4>
+                            
+                            <asp:Panel CssClass="my-2" ID="Panel1" runat="server">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Medicine medicine in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => medicine.Id)</td>
+                                            <td>@Html.DisplayFor(modelItem => medicine.Name)</td>
+                                            <td>@Html.DisplayFor(modelItem => medicine.Description)</td>
+                                            <td>@Html.DisplayFor(modelItem => medicine.Quantity)</td>
+                                            <td>@Html.DisplayFor(modelItem => medicine.Price)</td>
+                                            
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            </asp:Panel>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+  
+
+

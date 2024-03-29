@@ -1,0 +1,44 @@
+﻿@model HealthHub_MVC_CORE.Models.Ambulance
+@{
+    ViewData["Title"] = "AddAmbulance";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Add Ambulance</h4>
+
+                        <form asp-action="AddAmbulance" asp-controller="Admin" method="Post">
+                            <div class="mb-3">
+                                    <label asp-for="Name" class="form-label">Name</label>
+                                <input asp-for="Name" type="text" runat="server" class="form-control" id="name" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="AmbulanceNo" class="form-label">Ambulance No</label>
+                                <input asp-for="AmbulanceNo" type="text" runat="server" class="form-control" id="no" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="AmbulanceStatus" class="form-label">Ambulance Status</label>
+                                <select class="form-select" asp-for="AmbulanceStatus" runat="server" id="astatus" aria-label="Default select example">
+                                        <option value="Select Status" selected>Select Status</option>
+                                        <option value="Available">Available</option>
+                                        <option value="Busy">busy</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="AmbulanceDriverName" class="form-label">Ambulance Driver Name</label>
+                                <input type="text" asp-for="AmbulanceDriverName" runat="server" class="form-control" id="adname" />
+                                </div>
+                            <button type="submit" runat="server" class="btn btn-primary">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+</div>

@@ -1,0 +1,337 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthHub</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="stylesheet" href="~/HomeAssets/css/style.css">
+</head>
+<body>
+    <header class="header">
+
+        <a href="Home.aspx" class="logo"> <i class="fas fa-heartbeat"></i> HealthHub </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#about">about</a>
+            <a href="#doctors">doctors</a>
+            <a href="#review">review</a>
+            <a asp-area="" asp-action="Register" asp-controller="User">Register</a>
+            <a asp-area="" asp-action="Login" asp-controller="User">Login</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="image">
+            <img src="./HomeAssets/image/home-img.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>stay safe, stay healthy</h3>
+            <p>We Will also Think about your Helth and that's why we will provide you a good offline and online services.</p>
+            <a asp-action="ContactUs" asp-controller="Home" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </section>
+
+
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-user-md"></i>
+            <h3>140+</h3>
+            <p>doctors at work</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-users"></i>
+            <h3>1040+</h3>
+            <p>satisfied patients</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-procedures"></i>
+            <h3>500+</h3>
+            <p>bed facility</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-hospital"></i>
+            <h3>80+</h3>
+            <p>available hospitals</p>
+        </div>
+
+    </section>
+
+    <!-- icons section ends -->
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>free checkups</h3>
+                <p>You can check Up ragularly on our hospital for free.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3>24/7 ambulance</h3>
+                <p>Our Hospital Provides 24 Hours Ambulances For Emergency.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>expert doctors</h3>
+                <p>In Our Hospital Lots of Doctor to Save your Life and Make you Healthy.</p>
+
+            </div>
+
+            <div class="box">
+                <i class="fas fa-pills"></i>
+                <h3>medicines</h3>
+                <p>We will provide good quality medicine in Regionable price Hospital It self.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-procedures"></i>
+                <h3>bed facility</h3>
+                <p>In Hospital you find bed facilites also if you want stay then its helpful.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>total care</h3>
+                <p>We Will totaly care Patient our staff will satisfy your all the needs.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="./HomeAssets/image/about-img.svg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>we take care of your healthy life</h3>
+                <p>Welcome to HealthHub, where your well-being is our top priority. As a leading healthcare institution, we are dedicated to providing exceptional medical services with a focus on compassion, innovation, and personalized care.</p>
+                <p>At HealthHub, we understand that each individual is unique, and so are their healthcare needs. Our team of highly skilled and compassionate healthcare professionals is committed to delivering comprehensive and patient-centered care. From routine check-ups to specialized treatments, we offer a wide range of services to cater to the diverse health requirements of our community.</p>
+                <a href="https://ied.eu/about/health-hub/" target="_blank" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="doctors" id="doctors">
+
+        <h1 class="heading"> our <span>doctors</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="~/HomeAssets/image/doc-1.jpg" alt="">
+                <h3>
+                    Shrukant Sharma
+                </h3>
+                <span>expert doctor</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="~/HomeAssets/image/doc-2.jpg" alt="">
+                <h3>Nishani kansu</h3>
+                <span>expert doctor</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="~/HomeAssets/image/doc-3.jpg" alt="">
+                <h3>murli parmar</h3>
+                <span>expert doctor</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="~/HomeAssets/image/doc-4.jpg" alt="">
+                <h3>Nirali Shah</h3>
+                <span>expert doctor</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="~/HomeAssets/image/doc-5.jpg" alt="">
+                <h3>Rita Patel</h3>
+                <span>expert doctor</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="~/HomeAssets/image/doc-6.jpg" alt="">
+                <h3>Hiren Sharma </h3>
+                <span>expert doctor</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> client's <span>review</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="./HomeAssets/image/pic-1.jpg" alt="">
+                <h3>Nakul Sridevan</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text"> Everyone from the nurses to the doctors to the respiratory therapists everyone  was absolutely fantastic, professional, caring and outstanding</p>
+            </div>
+
+            <div class="box">
+                <img src="./HomeAssets/image/pic-2.webp" alt="">
+                <h3>Sukriti Ranjan</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">Kind, friendly staff from the minute we walked in, felt very safe in their hands as nurses were always on hand and checking on me</p>
+            </div>
+
+            <div class="box">
+                <img src="./HomeAssets/image/pic-3.jpg" alt="">
+                <h3>Amar Sahgal</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">I wish to express my deep appreciation for the wonderful care I received at the Hospital of the University of Pennsylvania.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
+                <a href="#about"> <i class="fas fa-chevron-right"></i> about </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+                <a href="#review"> <i class="fas fa-chevron-right"></i> review </a>
+
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> massage therapy </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> cardiology </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="tel:+919106724262"> <i class="fas fa-phone"></i> +91-9106724262 </a>
+                <a href="http://www.gmail.com/" target="_blank"> <i class="fas fa-envelope"></i> foramdholakiya@gmail.com </a>
+                <a href="http://www.gmail.com/" target="_blank"> <i class="fas fa-envelope"></i> neeldalsania@gmail.com </a>
+                <a href="http://www.gmail.com/" target="_blank"> <i class="fas fa-envelope"></i> adzalavadiya@gmail.com </a>
+                <a href="https://www.google.com/maps/" target="_blank"> <i class="fas fa-map-marker-alt"></i> Rajkot,Gujarat, india - 360003 </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="https://twitter.com/?lang=en" target="_blank"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="https://www.linkedin.com/" target="_blank"> <i class="fab fa-linkedin"></i> linkedin </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span>Pro Coders</span> | all rights reserved </div>
+
+    </section>
+    <script src="~/HomeAssets/js/script.js"></script>
+
+</body>
+</html>

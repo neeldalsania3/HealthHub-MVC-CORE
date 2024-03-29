@@ -1,0 +1,195 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HealthHub_MVC_CORE
+build_property.RootNamespace = HealthHub_MVC_CORE
+build_property.ProjectDir = E:\HealthHub MVC CORE\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\HealthHub MVC CORE
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/HealthHub MVC CORE/Views/Admin/AddAmbulance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQW1idWxhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/AddAnnouncement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQW5ub3VuY2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/AddAppoinment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQXBwb2lubWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/AddDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/AddDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/AddMedicine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTWVkaWNpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/ListofAmbulance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdG9mQW1idWxhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/ListofAnnouncement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdG9mQW5ub3VuY2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/ListofDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdG9mRGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/ListofDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdG9mRG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/ListofMedicine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdG9mTWVkaWNpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/ListofpendingAppoinment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdG9mcGVuZGluZ0FwcG9pbm1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/UpdateAmbulance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQW1idWxhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/UpdateAnnouncement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQW5ub3VuY2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/UpdateAppoinment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQXBwb2lubWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/UpdateDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlRGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/UpdateDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlRG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Admin/UpdateMedicine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlTWVkaWNpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/AddAppoinment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRBcHBvaW5tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/ListofactiveAppointments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0b2ZhY3RpdmVBcHBvaW50bWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/ListofAmbulance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0b2ZBbWJ1bGFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/ListofAnnouncement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0b2ZBbm5vdW5jZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/ListofDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0b2ZEZXBhcnRtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/ListofDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0b2ZEb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/ListofMedicine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0b2ZNZWRpY2luZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/ListofpendingAppoinment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0b2ZwZW5kaW5nQXBwb2lubWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/User/UserDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HealthHub MVC CORE/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-03w7ainbz4

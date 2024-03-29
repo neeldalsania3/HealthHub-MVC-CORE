@@ -1,0 +1,225 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor context
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"]- HealthHub</title>
+
+    <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
+
+    <link rel="stylesheet" href="~/assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+    <style>
+        .full-width-div {
+            width: 79%;
+            margin: 0 ;
+            background-color: #f0f0f0; 
+        }
+    </style>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" />
+</head>
+<body>
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="./Dashboard.aspx" style="color:white">HealthHub</a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="search-field d-none d-xl-block">
+                <form class="d-flex align-items-center h-100" action="#">
+                    <div class="input-group">
+                        <div class="input-group-prepend bg-transparent">
+                            <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                        </div>
+                        <input type="text" class="form-control bg-transparent border-0" placeholder="Search products">
+                    </div>
+                </form>
+            </div>
+            <ul class="navbar-nav navbar-nav-right mx-6">
+
+                <li class="nav-item nav-profile dropdown mx-6">
+                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        <div class="nav-profile-text">
+                            <div ID="Username" CssClass="mb-1 text-black" runat="server">@context.HttpContext.Session.GetString("Email")</div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">
+
+                        <div class="p-2">
+                            <a class="nav-link" asp-area="" asp-action="Login" asp-controller="User">Logout</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <li class="nav-item nav-category">Main</li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-action="Dashbord" asp-controller="Admin">
+                        <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
+                        <span class="menu-title"> Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="icon-bg"><i class="mdi mdi-webhook menu-icon"></i></span>
+                        <span class="menu-title">Departments</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic1">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">  <a class="nav-link" asp-area="" asp-action="AddDepartment" asp-controller="Admin">Add Department</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="ListofDepartment" asp-controller="Admin">List Of Departments</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic6" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="icon-bg"><i class="mdi mdi-webhook menu-icon"></i></span>
+                        <span class="menu-title">Doctors</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic6">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="AddDoctor" asp-controller="Admin">Add Doctor</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="ListofDoctor" asp-controller="Admin">List Of Doctors</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="icon-bg"><i class="mdi mdi-tooltip-edit menu-icon"></i></span>
+                        <span class="menu-title">Appointments</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic2">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="AddAppoinment" asp-controller="Admin">Add Appointment</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="ListofpendingAppoinment" asp-controller="Admin">List Of  Appointment</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="icon-bg"><i class="mdi mdi-bookmark-check menu-icon"></i></span>
+                        <span class="menu-title">Announcement</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic3">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="AddAnnouncement" asp-controller="Admin">Add Announcement</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="ListofAnnouncement" asp-controller="Admin">List Of Announcement</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="icon-bg"><i class="mdi mdi-needle menu-icon"></i></span>
+                        <span class="menu-title">Medicine</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic4">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="AddMedicine" asp-controller="Admin">Add Medicine</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="ListofMedicine" asp-controller="Admin">List Of Medicine</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic5" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="icon-bg"><i class="mdi mdi-ambulance menu-icon"></i></span>
+                        <span class="menu-title">Ambulance</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic5">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="AddAmbulance" asp-controller="Admin">Add Ambulance</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-area="" asp-action="ListofAmbulance" asp-controller="Admin">List Of Ambulance</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item sidebar-Admin-actions">
+                    <div class="Admin-details">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="d-flex align-items-center">
+
+                                    <div class="sidebar-profile-text">
+                                        <Label ID="Label1" CssClass="mb-1" runat="server">@context.HttpContext.Session.GetString("Email")</Label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item sidebar-Admin-actions">
+                    <div class="sidebar-Admin-menu">
+                        <a href="#" class="nav-link">
+                            <i class="mdi mdi-settings menu-icon"></i>
+                            <span class="menu-title">Settings</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-item sidebar-Admin-actions">
+                    <div class="sidebar-Admin-menu">
+                        <a class="nav-link" asp-area="" asp-action="Login" asp-controller="User">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="full-width-div">
+        @RenderBody()
+            @if (IsSectionDefined("Scripts"))
+            {
+                @RenderSection("Scripts")
+            }
+  
+    <footer class="footer">
+        <div class="footer-inner-wraper">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="">Medicate </a>2024</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a href="" > Medicate</a> is a Best Hospital Management Tool.</span>
+            </div>
+        </div>
+    </footer>
+    </div>
+     @if (TempData["msg"] != null)
+    {
+        <script>
+            alert('@TempData["msg"].ToString();');
+            window.location.href = "@Url.Action("Dashboard","User")";
+        </script>
+    } 
+    <script src="~/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="~/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/assets/vendors/jquery-circle-progress/js/circle-progress.min.js"></script>
+    <script src="~/assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="~/assets/js/off-canvas.js"></script>
+    <script src="~/assets/js/hoverable-collapse.js"></script>
+    <script src="~/assets/js/misc.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="~/assets/js/dashboard+.js"></script>
+</body>
+</html>

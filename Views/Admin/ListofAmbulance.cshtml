@@ -1,0 +1,82 @@
+﻿@model IEnumerable<HealthHub_MVC_CORE.Models.Ambulance>
+@{
+    ViewData["Title"] = "List Of Ambulance";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title"> List of Ambulances </h3>
+        </div>
+        <div class="row">
+            <div class="col-14  grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">List of Ambulances</h4>
+                        <a class="btn btn-outline-success btn-fw" asp-area="" asp-action="AddAmbulance" asp-controller="Admin">Add Ambulance</a>
+
+                        <asp:Panel CssClass="my-3" ID="Panel1" runat="server">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>AmbulanceNo</th>
+                                        <th>Ambulance Status</th>
+                                        <th>Ambulance Driver Name</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Ambulance ambulances in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => ambulances.Id)</td>
+                                            <td>@Html.DisplayFor(modelItem => ambulances.Name)</td>
+                                            <td>@Html.DisplayFor(modelItem => ambulances.AmbulanceNo)</td>
+                                            <td>@Html.DisplayFor(modelItem => ambulances.AmbulanceStatus)</td>
+                                            <td>@Html.DisplayFor(modelItem => ambulances.AmbulanceDriverName)</td>
+                                            <td>
+                                                <a class="nav-link" asp-action="UpdateAmbulance" asp-route-id="@ambulances.Id">Update</a>
+                                                <a class="remove-ambulance" href="#" data-ambulance-id="@ambulances.Id">Remove</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </asp:Panel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".remove-ambulance").click(function (e) {
+                e.preventDefault();
+                var Id = $(this).data("ambulance-id");
+                if (confirm("Are you sure you want to remove this ambulance?")) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/admin/RemoveAmbulance/" + Id,
+                        success: function (response) {
+                            if (response.success) {
+                                alert("Ambulance removed successfully");
+                                $(e.target).closest("tr").remove();
+                            } else {
+                                alert("Failed to remove ambulance");
+                            }
+                        },
+                        error: function () {
+                            alert("Error removing ambulance");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

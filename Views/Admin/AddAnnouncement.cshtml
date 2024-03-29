@@ -1,0 +1,41 @@
+﻿@model HealthHub_MVC_CORE.Models.Announcement
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+        <div class="main-panel">
+            <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> Add Announcement</h3>
+            </div>
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Add Announcement</h4>
+
+                            <form asp-action="AddAnnouncement">
+                                <div class="mb-3">
+                                <label asp-for="Announcements" class="form-label">Announcement</label>
+                                <input type="text" asp-for="Announcements" class="form-control" runat="server" id="Announcement" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="AnnouncementFor" class="form-label">Announcement For</label>
+                                <select class="form-select" asp-for="AnnouncementFor" runat="server" id="Announcementfor" aria-label="Default select example">
+                                        <option value="Patient" selected>Patient</option>
+                                        <option value="Doctor">Doctor</option>
+                                        <option value="Admins">Admins</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="Enddate" class="form-label">End Date</label>
+                                <input type="date" asp-for="Enddate" runat="server" class="form-control" id="Aenddaate" />
+                                </div>
+                                <button type="submit"  class="btn btn-primary">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>

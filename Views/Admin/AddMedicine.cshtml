@@ -1,0 +1,39 @@
+﻿@model HealthHub_MVC_CORE.Models.Medicine;
+@{
+    ViewData["Title"] = "Add Medicine";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+        <div class="main-panel">
+            <div class="content-wrapper">
+            
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Add Medicine</h4>
+
+                            <form asp-action="AddMedicine" method="post">
+                                <div class="mb-3">
+                                    <label asp-for="Name" class="form-label">Name</label>
+                                <input type="text" asp-for="Name" class="form-control" id="mname" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="Description" class="form-label">Description</label>
+                                <input type="text" asp-for="Description" class="form-control" id="mdesc" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="Quantity" class="form-label">Quantity</label>
+                                <input type="text" asp-for="Quantity" class="form-control" id="mquantity" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="Price" class="form-label">Price</label>
+                                <input type="text" asp-for="Price" class="form-control" id="mprice" />
+                                </div>
+                                <button type="submit"  class="btn btn-primary">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>

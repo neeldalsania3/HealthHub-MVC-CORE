@@ -1,0 +1,43 @@
+﻿@model HealthHub_MVC_CORE.Models.Department
+@{
+    ViewData["Title"] = "Add Department";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}       <div class="main-panel">
+
+            <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> Add Department</h3>
+            </div>
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Add Department</h4>
+
+                        <form asp-action="AddDepartment" method="post">
+                                <div class="mb-3">
+                                    <label asp-for="Name" class="form-label">Name</label>
+                                <input type="text" asp-for="Name" class="form-control" id="Deptname" />
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="Description" class="form-label">Description</label>
+                                <input type="text" asp-for="Description" class="form-control" id="Deptdesc" />
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="Status" class="form-label">Status</label>
+                                <select class="form-select" asp-for="Status" id="Deptstatus" aria-label="Default select example">
+                                        <option value="Active" selected>active</option>
+                                        <option value="Close">Close</option>
+                                        <option value="Busy">Busy</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+     </div>
+   

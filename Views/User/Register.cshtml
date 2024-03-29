@@ -1,0 +1,67 @@
+﻿@model HealthHub_MVC_CORE.Models.UserModel
+@{
+    ViewData["Title"] = "Register";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="/LoginRegisterAssets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/LoginRegisterAssets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/LoginRegisterAssets/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="/LoginRegisterAssets/css/iofrm-theme9.css">
+</head>
+<body>
+
+    <div class="form-body">
+        <div class="row">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <h3>Access more things with Register.</h3>
+                    <img src="/LoginRegisterAssets/images/graphic5.svg" alt="">
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <div class="website-logo-inside">
+                            <a>
+                                <div style="color:white;">
+                                    <h2>HealthHub</h2>
+                                </div>
+                            </a><br />
+
+                        </div>
+                        <div class="page-links">
+                            <a asp-area="" asp-action="Login" asp-controller="User">Login</a> <a class="active" asp-area="" asp-action="Register" asp-controller="User">Register</a>
+                        </div>
+                        <form asp-action="AddUser" >
+
+                            <input class="form-control" asp-for="Name" type="text" id="Name" name="Name" placeholder="Full Name" required>
+
+                      <input class="form-control" asp-for="Email" type="email" name="email" id="email" placeholder="E-mail Address" required>
+                            <input class="form-control" asp-for="Password" type="password" name="password" id="password" placeholder="Password" required>
+                            <div class="form-button">
+                                <button class="ibtn" >Register</button>
+                            </div>
+                           @*  <a href="/signin-google" class="btn btn-primary">Login with Google</a>
+                            *@<font color="white">Already have account ? <a style="color: white;" asp-action="Login" asp-controller="User">Login</a></font>
+
+                        </form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/LoginRegisterAssets/js/jquery.min.js"></script>
+    <script src="/LoginRegisterAssets/js/popper.min.js"></script>
+    <script src="/LoginRegisterAssets/js/bootstrap.min.js"></script>
+    <script src="/LoginRegisterAssets/js/main.js"></script>
+</body>
+
+</html>

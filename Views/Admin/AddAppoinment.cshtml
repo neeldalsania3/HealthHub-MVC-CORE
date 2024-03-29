@@ -1,0 +1,49 @@
+﻿@model HealthHub_MVC_CORE.Models.Appointment
+@{
+    ViewData["Title"] = "Add Appoinment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="main-panel">
+
+    <div class="content-wrapper">
+        <div class="page-header">
+                <h3 class="page-title"> Add Appoinment</h3>
+        </div>
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Take Appointment</h4>
+
+                        <form asp-action="AddAppoinment">
+                                <div class="mb-3">
+                                <label asp-for="Patientname" class="form-label">Patient Name</label>
+                                <input type="text" asp-for="Patientname" runat="server" class="form-control" id="pname" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="Doctorname" class="form-label">Doctor Name</label>
+                                <select  asp-for="Doctorname" class="form-select" id="dname" aria-label="Default select example">
+                                        <option selected>Chosse</option>
+                                        <option value="Shrukant Sharma">Shrukant Sharma</option>
+                                        <option value="Nishani kansu">Nishani kansu</option>
+                                        <option value="murli parmar">murli parmar</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="AppointmentDate" class="form-label">Appointment Date</label>
+                                <input type="date" asp-for="AppointmentDate" class="form-control" id="Appointmentdate" />
+                                </div>
+                                <div class="mb-3">
+                                <label asp-for="Problem" class="form-label">Problem</label>
+                                <input type="text" asp-for="Problem" class="form-control" id="problem" />
+                                </div>
+                                <button type="submit"  class="btn btn-primary">Take</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
